@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA88853140D8BE50082190B /* data in Resources */ = {isa = PBXBuildFile; fileRef = 3FA88852140D8BE50082190B /* data */; };
 		3FB0A5B8140D3FCC00818176 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB0A5B7140D3FCC00818176 /* Cocoa.framework */; };
 		3FB0A5C2140D3FCC00818176 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FB0A5C0140D3FCC00818176 /* InfoPlist.strings */; };
 		3FB0A5C4140D3FCC00818176 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A5C3140D3FCC00818176 /* main.m */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FA88852140D8BE50082190B /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
 		3FB0A5B3140D3FCC00818176 /* GameAndWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameAndWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB0A5B7140D3FCC00818176 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3FB0A5BA140D3FCC00818176 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -163,6 +165,7 @@
 		3FB0A612140D406900818176 /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
+				3FA88852140D8BE50082190B /* data */,
 				3FB0A613140D408600818176 /* include */,
 				3FB0A632140D408600818176 /* src */,
 				3FB0A66A140D411200818176 /* platform_osx.h */,
@@ -174,8 +177,8 @@
 		3FB0A613140D408600818176 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				3FB0A614140D408600818176 /* device.h */,
 				3FB0A615140D408600818176 /* devices */,
+				3FB0A614140D408600818176 /* device.h */,
 				3FB0A623140D408600818176 /* gamelist.h */,
 				3FB0A624140D408600818176 /* gwdbg.h */,
 				3FB0A625140D408600818176 /* gwdefs.h */,
@@ -209,8 +212,8 @@
 		3FB0A632140D408600818176 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				3FB0A633140D408600818176 /* device.cpp */,
 				3FB0A634140D408600818176 /* devices */,
+				3FB0A633140D408600818176 /* device.cpp */,
 				3FB0A642140D408600818176 /* gamelist.cpp */,
 				3FB0A644140D408600818176 /* menu.cpp */,
 				3FB0A64D140D408600818176 /* platform.cpp */,
@@ -291,6 +294,7 @@
 				3FB0A5C2140D3FCC00818176 /* InfoPlist.strings in Resources */,
 				3FB0A5C8140D3FCC00818176 /* Credits.rtf in Resources */,
 				3FB0A5CE140D3FCC00818176 /* MainMenu.xib in Resources */,
+				3FA88853140D8BE50082190B /* data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
