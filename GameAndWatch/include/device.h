@@ -223,6 +223,7 @@ public:
 
 	int gamewidth_get() { return gamerect_.w; }
 	int gameheight_get() { return gamerect_.h; }
+
 protected:
     virtual GW_Platform_GameType do_gametype_get() { return GPG_MENU; }
     virtual void do_turnon() {}
@@ -321,6 +322,10 @@ public:
     void GetTime(devtime_t *time);
 
     GW_Platform *platform_get() { return platform_; }
+  
+    void PrepareToRun(GW_Game * game);
+    bool RunStep(GW_Platform_Event * event);
+
 private:
     void draw_game();
 

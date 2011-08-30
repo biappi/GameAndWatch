@@ -423,6 +423,40 @@ void GW_Device::draw_game()
     }
 }
 
+void GW_Device::PrepareToRun(GW_Game *game)
+{
+  game_=game;  
+  Load();
+  MoveBGCenter();
+}
+
+bool GW_Device::RunStep(GW_Platform_Event * event)
+{
+  if (event)
+    process_event(event);
+  
+  if (game_->IsOn())
+    game_->Update();
+  
+  if (game_->CheckChanged())
+  {
+    // clear screen
+    platform_->draw_clear();
+    
+    // draw bg
+    if (game_->bgimage_get()>-1)
+      platform_->draw_image(game_->data().image_get(game_->bgimage_get())->data_get(), offsetx_, offsety_);
+    
+    draw_game();
+    
+    platform_->draw_flip(z_output_width_, z_output_height_);
+    return true;
+  }
+  
+  return false;
+}
+
+
 void GW_Device::Run(GW_Game *game)
 {
     game_=game;

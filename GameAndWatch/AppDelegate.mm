@@ -13,14 +13,20 @@
 #import "platform_osx.h"
 
 @interface AppDelegate ()
-@property(nonatomic, assign) GW_Game * game;
+
+@property(nonatomic, assign) GW_Platform_OSX * platform;
+@property(nonatomic, assign) GW_Game         * game;
+@property(nonatomic, assign) GW_Device       * device;
+
 @end
 
 @implementation AppDelegate
 
 @synthesize window;
 @synthesize imageView;
+@synthesize platform;
 @synthesize game;
+@synthesize device;
 
 - (void)dealloc;
 {
@@ -31,22 +37,19 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
 {
-  GW_Platform_OSX platform;    
-  platform.initialize();
+  self.platform = new GW_Platform_OSX;    
+  self.platform->initialize();
   
-  GW_GameList gamelist(&platform);
-  
+  GW_GameList gamelist(self.platform);  
   self.game=gamelist.get(0)->create();
-  
   self.game->TurnOn();
   
-  GW_Device device(&platform);
-  device.Run(game);
+  self.device = new GW_Device(self.platform);
+  self.device->PrepareToRun(self.game);
+  self.device->RunStep(NULL);
   
-  self.imageView.image = (CGImageRef)platform.get_screen_image();
+  self.imageView.image = (CGImageRef)self.platform->get_screen_image();
   [self.imageView setNeedsDisplay:YES];
-  
-  platform.finalize();
 }
 
 @end
