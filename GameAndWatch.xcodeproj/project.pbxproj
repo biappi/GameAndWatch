@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3FA88853140D8BE50082190B /* data in Resources */ = {isa = PBXBuildFile; fileRef = 3FA88852140D8BE50082190B /* data */; };
+		3FA88856140D9A9C0082190B /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA88855140D9A9C0082190B /* ImageView.m */; };
 		3FB0A5B8140D3FCC00818176 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB0A5B7140D3FCC00818176 /* Cocoa.framework */; };
 		3FB0A5C2140D3FCC00818176 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FB0A5C0140D3FCC00818176 /* InfoPlist.strings */; };
 		3FB0A5C4140D3FCC00818176 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A5C3140D3FCC00818176 /* main.m */; };
@@ -36,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		3FA88852140D8BE50082190B /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+		3FA88854140D9A9C0082190B /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageView.h; sourceTree = "<group>"; };
+		3FA88855140D9A9C0082190B /* ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageView.m; sourceTree = "<group>"; };
 		3FB0A5B3140D3FCC00818176 /* GameAndWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameAndWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB0A5B7140D3FCC00818176 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3FB0A5BA140D3FCC00818176 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -145,6 +148,8 @@
 				3FB0A612140D406900818176 /* Legacy */,
 				3FB0A5C9140D3FCC00818176 /* AppDelegate.h */,
 				3FB0A5CA140D3FCC00818176 /* AppDelegate.mm */,
+				3FA88854140D9A9C0082190B /* ImageView.h */,
+				3FA88855140D9A9C0082190B /* ImageView.m */,
 				3FB0A5CC140D3FCC00818176 /* MainMenu.xib */,
 			);
 			path = GameAndWatch;
@@ -325,6 +330,7 @@
 				3FB0A660140D408600818176 /* menu.cpp in Sources */,
 				3FB0A668140D408600818176 /* platform.cpp in Sources */,
 				3FB0A66C140D411200818176 /* platform_osx.mm in Sources */,
+				3FA88856140D9A9C0082190B /* ImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

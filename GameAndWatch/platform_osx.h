@@ -13,6 +13,8 @@ class GW_Platform_OSX : public GW_Platform
 public:
     virtual void initialize();
     virtual void finalize();
+    
+    virtual void * get_screen_image();
   
     virtual int width_get();
     virtual int height_get();

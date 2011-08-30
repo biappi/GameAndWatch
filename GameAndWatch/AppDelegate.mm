@@ -12,31 +12,41 @@
 #import "device.h"
 #import "platform_osx.h"
 
+@interface AppDelegate ()
+@property(nonatomic, assign) GW_Game * game;
+@end
+
 @implementation AppDelegate
 
 @synthesize window;
+@synthesize imageView;
+@synthesize game;
 
 - (void)dealloc;
 {
-    self.window = nil;
-    [super dealloc];
+  self.window = nil;
+  self.imageView = nil;
+  [super dealloc];
 }
-	
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
 {
-    GW_Platform_OSX platform;//(640, 480);
-    
-    platform.initialize();
-    
-    GW_GameList gamelist(&platform);
-    
-    GW_Game *game=gamelist.get(0)->create();
-    GW_Device device(&platform);
-    
-    device.Run(game);
-    delete game;
-    
-    platform.finalize();
+  GW_Platform_OSX platform;    
+  platform.initialize();
+  
+  GW_GameList gamelist(&platform);
+  
+  self.game=gamelist.get(0)->create();
+  
+  self.game->TurnOn();
+  
+  GW_Device device(&platform);
+  device.Run(game);
+  
+  self.imageView.image = (CGImageRef)platform.get_screen_image();
+  [self.imageView setNeedsDisplay:YES];
+  
+  platform.finalize();
 }
 
 @end

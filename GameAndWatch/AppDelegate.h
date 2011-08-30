@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ImageView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (strong) IBOutlet NSWindow * window;
+@property (strong) IBOutlet NSWindow  * window;
+@property (assign) IBOutlet ImageView * imageView;
 
 @end

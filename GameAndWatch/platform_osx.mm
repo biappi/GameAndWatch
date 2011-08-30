@@ -8,15 +8,20 @@
 
 #import "platform_osx.h"
 
+#pragma mark Argh
+#pragma mark -
+
+NSImage * screenImage;
+
+#pragma mark -
 #pragma mark Data Classes
 #pragma mark -
 
 class GW_CGImage : public GW_Platform_Image
-{
-  private:
-    CGImageRef image;
-  
+{  
   public:
+    CGImageRef image;
+
     GW_CGImage(CGImageRef theImage)
       : image(theImage)
     {
@@ -35,20 +40,26 @@ class GW_CGImage : public GW_Platform_Image
 void GW_Platform_OSX::initialize()
 {
   datapath_set(string([[[NSBundle mainBundle] pathForResource:@"data" ofType:nil] UTF8String]));
+  screenImage = [[NSImage alloc] initWithSize:NSMakeSize(width_get(), height_get())];
 }
 
 void GW_Platform_OSX::finalize()
 {
 }
 
+void * GW_Platform_OSX::get_screen_image()
+{
+  return [screenImage CGImageForProposedRect:NULL context:nil hints:nil];
+}
+
 int GW_Platform_OSX::width_get()
 {
-  return 0;
+  return 640;
 }
 
 int GW_Platform_OSX::height_get()
 {
-  return 0;
+  return 480;
 }
 
 unsigned int GW_Platform_OSX::ticks_get()
@@ -74,10 +85,24 @@ bool GW_Platform_OSX::event(GW_Platform_GameType gametype, GW_Platform_Event *ev
 
 void GW_Platform_OSX::draw_clear()
 {
+  
 }
 
-void GW_Platform_OSX::draw_image(GW_Platform_Image *image, int x, int y)
+void GW_Platform_OSX::draw_image(GW_Platform_Image * image, int x, int y)
 {
+  CGImageRef cgImage = dynamic_cast<GW_CGImage *>(image)->image;
+  
+  y = height_get() - y - (int)CGImageGetHeight(cgImage);
+  
+  [screenImage lockFocus];
+  {
+    CGContextRef context = (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
+    
+    CGContextDrawImage(context,
+                       CGRectMake(x, y, CGImageGetWidth(cgImage), CGImageGetHeight(cgImage)),
+                       cgImage);    
+  }
+  [screenImage unlockFocus];
 }
 
 void GW_Platform_OSX::draw_line(int x1, int y1, int x2, int y2, GW_Platform_RGB * color)

@@ -432,7 +432,7 @@ void GW_Device::Run(GW_Game *game)
     MoveBGCenter();
 
     bool quit=false;
-    while (!quit)
+    //while (!quit)
     {
         GW_Platform_Event event;
         while (platform_->event(game_->gametype_get(), &event))
@@ -443,8 +443,9 @@ void GW_Device::Run(GW_Game *game)
                 break;
             }
         }
-        if (quit)
-            break;
+      
+//        if (quit)
+//            break;
 
         if (game_->IsOn())
             game_->Update();
