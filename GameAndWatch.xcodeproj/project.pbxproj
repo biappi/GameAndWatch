@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FB0A5B8140D3FCC00818176 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB0A5B7140D3FCC00818176 /* Cocoa.framework */; };
+		3FB0A5C2140D3FCC00818176 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FB0A5C0140D3FCC00818176 /* InfoPlist.strings */; };
+		3FB0A5C4140D3FCC00818176 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A5C3140D3FCC00818176 /* main.m */; };
+		3FB0A5C8140D3FCC00818176 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB0A5C6140D3FCC00818176 /* Credits.rtf */; };
+		3FB0A5CB140D3FCC00818176 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A5CA140D3FCC00818176 /* AppDelegate.mm */; };
+		3FB0A5CE140D3FCC00818176 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB0A5CC140D3FCC00818176 /* MainMenu.xib */; };
+		3FB0A650140D408600818176 /* device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A633140D408600818176 /* device.cpp */; };
+		3FB0A651140D408600818176 /* dev_banana.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A635140D408600818176 /* dev_banana.cpp */; };
+		3FB0A652140D408600818176 /* dev_condor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A636140D408600818176 /* dev_condor.cpp */; };
+		3FB0A653140D408600818176 /* dev_defendo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A637140D408600818176 /* dev_defendo.cpp */; };
+		3FB0A654140D408600818176 /* dev_dkong.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A638140D408600818176 /* dev_dkong.cpp */; };
+		3FB0A655140D408600818176 /* dev_monkey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A639140D408600818176 /* dev_monkey.cpp */; };
+		3FB0A656140D408600818176 /* dev_pancake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A63A140D408600818176 /* dev_pancake.cpp */; };
+		3FB0A657140D408600818176 /* dev_pirate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A63B140D408600818176 /* dev_pirate.cpp */; };
+		3FB0A658140D408600818176 /* dev_rollerc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A63C140D408600818176 /* dev_rollerc.cpp */; };
+		3FB0A659140D408600818176 /* dev_sleepwlk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A63D140D408600818176 /* dev_sleepwlk.cpp */; };
+		3FB0A65A140D408600818176 /* deveng_vtech.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A63E140D408600818176 /* deveng_vtech.cpp */; };
+		3FB0A65B140D408600818176 /* deveng_vtech_banana.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A63F140D408600818176 /* deveng_vtech_banana.cpp */; };
+		3FB0A65C140D408600818176 /* deveng_vtech_condor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A640140D408600818176 /* deveng_vtech_condor.cpp */; };
+		3FB0A65D140D408600818176 /* deveng_vtech_monkey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A641140D408600818176 /* deveng_vtech_monkey.cpp */; };
+		3FB0A65E140D408600818176 /* gamelist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A642140D408600818176 /* gamelist.cpp */; };
+		3FB0A660140D408600818176 /* menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A644140D408600818176 /* menu.cpp */; };
+		3FB0A668140D408600818176 /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A64D140D408600818176 /* platform.cpp */; };
+		3FB0A66C140D411200818176 /* platform_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0A66B140D411200818176 /* platform_osx.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3FB0A5B3140D3FCC00818176 /* GameAndWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameAndWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB0A5B7140D3FCC00818176 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3FB0A5BA140D3FCC00818176 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3FB0A5BB140D3FCC00818176 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3FB0A5BC140D3FCC00818176 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3FB0A5BF140D3FCC00818176 /* GameAndWatch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameAndWatch-Info.plist"; sourceTree = "<group>"; };
+		3FB0A5C1140D3FCC00818176 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3FB0A5C3140D3FCC00818176 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FB0A5C5140D3FCC00818176 /* GameAndWatch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameAndWatch-Prefix.pch"; sourceTree = "<group>"; };
+		3FB0A5C7140D3FCC00818176 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3FB0A5C9140D3FCC00818176 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3FB0A5CA140D3FCC00818176 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		3FB0A5CD140D3FCC00818176 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3FB0A614140D408600818176 /* device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = device.h; sourceTree = "<group>"; };
+		3FB0A616140D408600818176 /* dev_banana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_banana.h; sourceTree = "<group>"; };
+		3FB0A617140D408600818176 /* dev_condor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_condor.h; sourceTree = "<group>"; };
+		3FB0A618140D408600818176 /* dev_defendo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_defendo.h; sourceTree = "<group>"; };
+		3FB0A619140D408600818176 /* dev_dkong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_dkong.h; sourceTree = "<group>"; };
+		3FB0A61A140D408600818176 /* dev_monkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_monkey.h; sourceTree = "<group>"; };
+		3FB0A61B140D408600818176 /* dev_pancake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_pancake.h; sourceTree = "<group>"; };
+		3FB0A61C140D408600818176 /* dev_pirate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_pirate.h; sourceTree = "<group>"; };
+		3FB0A61D140D408600818176 /* dev_rollerc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_rollerc.h; sourceTree = "<group>"; };
+		3FB0A61E140D408600818176 /* dev_sleepwlk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dev_sleepwlk.h; sourceTree = "<group>"; };
+		3FB0A61F140D408600818176 /* deveng_vtech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deveng_vtech.h; sourceTree = "<group>"; };
+		3FB0A620140D408600818176 /* deveng_vtech_banana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deveng_vtech_banana.h; sourceTree = "<group>"; };
+		3FB0A621140D408600818176 /* deveng_vtech_condor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deveng_vtech_condor.h; sourceTree = "<group>"; };
+		3FB0A622140D408600818176 /* deveng_vtech_monkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deveng_vtech_monkey.h; sourceTree = "<group>"; };
+		3FB0A623140D408600818176 /* gamelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gamelist.h; sourceTree = "<group>"; };
+		3FB0A624140D408600818176 /* gwdbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gwdbg.h; sourceTree = "<group>"; };
+		3FB0A625140D408600818176 /* gwdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gwdefs.h; sourceTree = "<group>"; };
+		3FB0A626140D408600818176 /* linked_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linked_ptr.h; sourceTree = "<group>"; };
+		3FB0A627140D408600818176 /* menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu.h; sourceTree = "<group>"; };
+		3FB0A62F140D408600818176 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+		3FB0A633140D408600818176 /* device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = device.cpp; sourceTree = "<group>"; };
+		3FB0A635140D408600818176 /* dev_banana.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dev_banana.cpp; sourceTree = "<group>"; };
+		3FB0A636140D408600818176 /* dev_condor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dev_condor.cpp; sourceTree = "<group>"; };
+		3FB0A637140D408600818176 /* dev_defendo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dev_defendo.cpp; sourceTree = "<group>"; };
+		3FB0A638140D408600818176 /* dev_dkong.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dev_dkong.cpp; sourceTree = "<group>"; };
+		3FB0A639140D408600818176 /* dev_monkey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dev_monkey.cpp; sourceTree = "<group>"; };
+		3FB0A63A140D408600818176 /* dev_pancake.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dev_pancake.cpp; sourceTree = "<group>"; };
+		3FB0A63B140D408600818176 /* dev_pirate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dev_pirate.cpp; sourceTree = "<group>"; };
+		3FB0A63C140D408600818176 /* dev_rollerc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dev_rollerc.cpp; sourceTree = "<group>"; };
+		3FB0A63D140D408600818176 /* dev_sleepwlk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dev_sleepwlk.cpp; sourceTree = "<group>"; };
+		3FB0A63E140D408600818176 /* deveng_vtech.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deveng_vtech.cpp; sourceTree = "<group>"; };
+		3FB0A63F140D408600818176 /* deveng_vtech_banana.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deveng_vtech_banana.cpp; sourceTree = "<group>"; };
+		3FB0A640140D408600818176 /* deveng_vtech_condor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deveng_vtech_condor.cpp; sourceTree = "<group>"; };
+		3FB0A641140D408600818176 /* deveng_vtech_monkey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = deveng_vtech_monkey.cpp; sourceTree = "<group>"; };
+		3FB0A642140D408600818176 /* gamelist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gamelist.cpp; sourceTree = "<group>"; };
+		3FB0A644140D408600818176 /* menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu.cpp; sourceTree = "<group>"; };
+		3FB0A64D140D408600818176 /* platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
+		3FB0A66A140D411200818176 /* platform_osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_osx.h; sourceTree = "<group>"; };
+		3FB0A66B140D411200818176 /* platform_osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = platform_osx.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FB0A5B0140D3FCC00818176 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB0A5B8140D3FCC00818176 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FB0A5A8140D3FCC00818176 = {
+			isa = PBXGroup;
+			children = (
+				3FB0A5BD140D3FCC00818176 /* GameAndWatch */,
+				3FB0A5B6140D3FCC00818176 /* Frameworks */,
+				3FB0A5B4140D3FCC00818176 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FB0A5B4140D3FCC00818176 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A5B3140D3FCC00818176 /* GameAndWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FB0A5B6140D3FCC00818176 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A5B7140D3FCC00818176 /* Cocoa.framework */,
+				3FB0A5B9140D3FCC00818176 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FB0A5B9140D3FCC00818176 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A5BA140D3FCC00818176 /* AppKit.framework */,
+				3FB0A5BB140D3FCC00818176 /* CoreData.framework */,
+				3FB0A5BC140D3FCC00818176 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3FB0A5BD140D3FCC00818176 /* GameAndWatch */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A5BE140D3FCC00818176 /* Boilerplate */,
+				3FB0A612140D406900818176 /* Legacy */,
+				3FB0A5C9140D3FCC00818176 /* AppDelegate.h */,
+				3FB0A5CA140D3FCC00818176 /* AppDelegate.mm */,
+				3FB0A5CC140D3FCC00818176 /* MainMenu.xib */,
+			);
+			path = GameAndWatch;
+			sourceTree = "<group>";
+		};
+		3FB0A5BE140D3FCC00818176 /* Boilerplate */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A5BF140D3FCC00818176 /* GameAndWatch-Info.plist */,
+				3FB0A5C0140D3FCC00818176 /* InfoPlist.strings */,
+				3FB0A5C3140D3FCC00818176 /* main.m */,
+				3FB0A5C5140D3FCC00818176 /* GameAndWatch-Prefix.pch */,
+				3FB0A5C6140D3FCC00818176 /* Credits.rtf */,
+			);
+			name = Boilerplate;
+			sourceTree = "<group>";
+		};
+		3FB0A612140D406900818176 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A613140D408600818176 /* include */,
+				3FB0A632140D408600818176 /* src */,
+				3FB0A66A140D411200818176 /* platform_osx.h */,
+				3FB0A66B140D411200818176 /* platform_osx.mm */,
+			);
+			name = Legacy;
+			sourceTree = "<group>";
+		};
+		3FB0A613140D408600818176 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A614140D408600818176 /* device.h */,
+				3FB0A615140D408600818176 /* devices */,
+				3FB0A623140D408600818176 /* gamelist.h */,
+				3FB0A624140D408600818176 /* gwdbg.h */,
+				3FB0A625140D408600818176 /* gwdefs.h */,
+				3FB0A626140D408600818176 /* linked_ptr.h */,
+				3FB0A627140D408600818176 /* menu.h */,
+				3FB0A62F140D408600818176 /* platform.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		3FB0A615140D408600818176 /* devices */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A616140D408600818176 /* dev_banana.h */,
+				3FB0A617140D408600818176 /* dev_condor.h */,
+				3FB0A618140D408600818176 /* dev_defendo.h */,
+				3FB0A619140D408600818176 /* dev_dkong.h */,
+				3FB0A61A140D408600818176 /* dev_monkey.h */,
+				3FB0A61B140D408600818176 /* dev_pancake.h */,
+				3FB0A61C140D408600818176 /* dev_pirate.h */,
+				3FB0A61D140D408600818176 /* dev_rollerc.h */,
+				3FB0A61E140D408600818176 /* dev_sleepwlk.h */,
+				3FB0A61F140D408600818176 /* deveng_vtech.h */,
+				3FB0A620140D408600818176 /* deveng_vtech_banana.h */,
+				3FB0A621140D408600818176 /* deveng_vtech_condor.h */,
+				3FB0A622140D408600818176 /* deveng_vtech_monkey.h */,
+			);
+			path = devices;
+			sourceTree = "<group>";
+		};
+		3FB0A632140D408600818176 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A633140D408600818176 /* device.cpp */,
+				3FB0A634140D408600818176 /* devices */,
+				3FB0A642140D408600818176 /* gamelist.cpp */,
+				3FB0A644140D408600818176 /* menu.cpp */,
+				3FB0A64D140D408600818176 /* platform.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		3FB0A634140D408600818176 /* devices */ = {
+			isa = PBXGroup;
+			children = (
+				3FB0A635140D408600818176 /* dev_banana.cpp */,
+				3FB0A636140D408600818176 /* dev_condor.cpp */,
+				3FB0A637140D408600818176 /* dev_defendo.cpp */,
+				3FB0A638140D408600818176 /* dev_dkong.cpp */,
+				3FB0A639140D408600818176 /* dev_monkey.cpp */,
+				3FB0A63A140D408600818176 /* dev_pancake.cpp */,
+				3FB0A63B140D408600818176 /* dev_pirate.cpp */,
+				3FB0A63C140D408600818176 /* dev_rollerc.cpp */,
+				3FB0A63D140D408600818176 /* dev_sleepwlk.cpp */,
+				3FB0A63E140D408600818176 /* deveng_vtech.cpp */,
+				3FB0A63F140D408600818176 /* deveng_vtech_banana.cpp */,
+				3FB0A640140D408600818176 /* deveng_vtech_condor.cpp */,
+				3FB0A641140D408600818176 /* deveng_vtech_monkey.cpp */,
+			);
+			path = devices;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FB0A5B2140D3FCC00818176 /* GameAndWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB0A5D1140D3FCC00818176 /* Build configuration list for PBXNativeTarget "GameAndWatch" */;
+			buildPhases = (
+				3FB0A5AF140D3FCC00818176 /* Sources */,
+				3FB0A5B0140D3FCC00818176 /* Frameworks */,
+				3FB0A5B1140D3FCC00818176 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameAndWatch;
+			productName = GameAndWatch;
+			productReference = 3FB0A5B3140D3FCC00818176 /* GameAndWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FB0A5AA140D3FCC00818176 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3FB0A5AD140D3FCC00818176 /* Build configuration list for PBXProject "GameAndWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3FB0A5A8140D3FCC00818176;
+			productRefGroup = 3FB0A5B4140D3FCC00818176 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FB0A5B2140D3FCC00818176 /* GameAndWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FB0A5B1140D3FCC00818176 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB0A5C2140D3FCC00818176 /* InfoPlist.strings in Resources */,
+				3FB0A5C8140D3FCC00818176 /* Credits.rtf in Resources */,
+				3FB0A5CE140D3FCC00818176 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FB0A5AF140D3FCC00818176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB0A5C4140D3FCC00818176 /* main.m in Sources */,
+				3FB0A5CB140D3FCC00818176 /* AppDelegate.mm in Sources */,
+				3FB0A650140D408600818176 /* device.cpp in Sources */,
+				3FB0A651140D408600818176 /* dev_banana.cpp in Sources */,
+				3FB0A652140D408600818176 /* dev_condor.cpp in Sources */,
+				3FB0A653140D408600818176 /* dev_defendo.cpp in Sources */,
+				3FB0A654140D408600818176 /* dev_dkong.cpp in Sources */,
+				3FB0A655140D408600818176 /* dev_monkey.cpp in Sources */,
+				3FB0A656140D408600818176 /* dev_pancake.cpp in Sources */,
+				3FB0A657140D408600818176 /* dev_pirate.cpp in Sources */,
+				3FB0A658140D408600818176 /* dev_rollerc.cpp in Sources */,
+				3FB0A659140D408600818176 /* dev_sleepwlk.cpp in Sources */,
+				3FB0A65A140D408600818176 /* deveng_vtech.cpp in Sources */,
+				3FB0A65B140D408600818176 /* deveng_vtech_banana.cpp in Sources */,
+				3FB0A65C140D408600818176 /* deveng_vtech_condor.cpp in Sources */,
+				3FB0A65D140D408600818176 /* deveng_vtech_monkey.cpp in Sources */,
+				3FB0A65E140D408600818176 /* gamelist.cpp in Sources */,
+				3FB0A660140D408600818176 /* menu.cpp in Sources */,
+				3FB0A668140D408600818176 /* platform.cpp in Sources */,
+				3FB0A66C140D411200818176 /* platform_osx.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FB0A5C0140D3FCC00818176 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FB0A5C1140D3FCC00818176 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3FB0A5C6140D3FCC00818176 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FB0A5C7140D3FCC00818176 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3FB0A5CC140D3FCC00818176 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FB0A5CD140D3FCC00818176 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FB0A5CF140D3FCC00818176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3FB0A5D0140D3FCC00818176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3FB0A5D2140D3FCC00818176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GameAndWatch/GameAndWatch-Prefix.pch";
+				HEADER_SEARCH_PATHS = GameAndWatch/include;
+				INFOPLIST_FILE = "GameAndWatch/GameAndWatch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3FB0A5D3140D3FCC00818176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GameAndWatch/GameAndWatch-Prefix.pch";
+				HEADER_SEARCH_PATHS = GameAndWatch/include;
+				INFOPLIST_FILE = "GameAndWatch/GameAndWatch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FB0A5AD140D3FCC00818176 /* Build configuration list for PBXProject "GameAndWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB0A5CF140D3FCC00818176 /* Debug */,
+				3FB0A5D0140D3FCC00818176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FB0A5D1140D3FCC00818176 /* Build configuration list for PBXNativeTarget "GameAndWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB0A5D2140D3FCC00818176 /* Debug */,
+				3FB0A5D3140D3FCC00818176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FB0A5AA140D3FCC00818176 /* Project object */;
+}
