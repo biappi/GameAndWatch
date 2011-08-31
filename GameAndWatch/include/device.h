@@ -5,6 +5,7 @@
 #include <string>
 #include "linked_ptr.h"
 #include "platform.h"
+#include <CoreFoundation/CoreFoundation.h>
 
 #define GW_INDEX_DEFAULT 0
 
@@ -99,10 +100,8 @@ private:
 class GW_GameData_Timer : public GW_GameData_Item
 {
 public:
-    GW_GameData_Timer(GW_GameData *gdata, int timerid, unsigned int time, bool autoloop) :
-        GW_GameData_Item(gdata),
-        timerid_(timerid), time_(time), autoloop_(autoloop), curtime_(0), delay_(0) {}
-    ~GW_GameData_Timer() {}
+    GW_GameData_Timer(GW_GameData *gdata, int timerid, unsigned int time, bool autoloop);
+    ~GW_GameData_Timer();
 
     void start(unsigned int time = 0);
     void stop();
@@ -116,11 +115,15 @@ public:
     bool autoloop() { return autoloop_; }
 
     void time_set(unsigned int time) { time_=time; }
+    void set_finished(bool x) { finished_ = x; }
+    
 private:
     int timerid_;
     unsigned int time_;
     bool autoloop_;
-    unsigned int curtime_, delay_;
+    unsigned int delay_;
+    CFRunLoopTimerRef timer_;
+    bool finished_;
 };
 
 class GW_GameData

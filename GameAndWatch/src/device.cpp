@@ -43,50 +43,67 @@ void GW_GameData_Sound::Load(const string &soundpath)
 //// GW_GameData_Timer
 ////
 //////////////////////////////////////////
+
+void GW_Game_Timer_Callback(CFRunLoopTimerRef timer, void * info);
+
+GW_GameData_Timer::GW_GameData_Timer(GW_GameData *gdata, int timerid, unsigned int time, bool autoloop)
+    : GW_GameData_Item(gdata),
+      timerid_(timerid),
+      time_(time),
+      autoloop_(autoloop),
+      delay_(0),
+      finished_(false)
+{
+    CFRunLoopTimerContext ctx = { 0 };
+    ctx.info = this;
+    
+    timer_ = CFRunLoopTimerCreate(NULL,
+                                  0,
+                                  1.0,
+                                  0,
+                                  0,
+                                  GW_Game_Timer_Callback,
+                                  &ctx);
+}
+
+GW_GameData_Timer::~GW_GameData_Timer()
+{
+    CFRelease(timer_);
+}
+
 void GW_GameData_Timer::start(unsigned int time)
 {
-    if (time>0)
-        time_=time;
+    CFAbsoluteTime fireTime = CFAbsoluteTimeGetCurrent() + ((CFAbsoluteTime)time_) / 1000.0;
+    time_=time;
     delay_=0;
-    curtime_=platform_get()->ticks_get();
+    finished_ = false;
+    CFRunLoopTimerSetNextFireDate(timer_, fireTime);
 }
 
 void GW_GameData_Timer::stop()
 {
-    curtime_=0;
+    CFRunLoopTimerInvalidate(timer_);
+    finished_ = false;
 }
 
 bool GW_GameData_Timer::started()
 {
-    return time_>0 && curtime_>0;
+    return CFRunLoopTimerIsValid(timer_);
 }
 
 bool GW_GameData_Timer::finished()
 {
-    bool ret=
-        started() &&
-        (curtime_ <= platform_get()->ticks_get()) &&
-        (platform_get()->ticks_get()-curtime_ > time_);
-/*
-    if (ret)
-    {
-        if (!autoloop_)
-            curtime_=0;
-        else
-            curtime_=platform_get()->ticks_get();
-    }
-*/
-    return ret;
+    return finished_;
 }
 
 void GW_GameData_Timer::loop()
 {
     if (finished())
     {
-        if (!autoloop_)
-            curtime_=0;
-        else
-            curtime_=platform_get()->ticks_get()+delay_;
+        if (autoloop_)
+            start(delay_);
+        
+        finished_ = true;
         delay_=0;
     }
 }
@@ -95,7 +112,13 @@ void GW_GameData_Timer::delay(unsigned int time)
 {
     if (started())
         delay_+=time;
-        //curtime_+=time;
+}
+
+void GW_Game_Timer_Callback(CFRunLoopTimerRef timer, void * info)
+{
+    GW_GameData_Timer * thiz = (GW_GameData_Timer *)info;
+    thiz->set_finished(true);
+    thiz->gamedata_get()->game_get()->Update();
 }
 
 //////////////////////////////////////////
