@@ -25,6 +25,7 @@ class GW_CGImage : public GW_Platform_Image
     GW_CGImage(CGImageRef theImage)
       : image(theImage)
     {
+      CGImageRetain(image);
     }
     
     ~GW_CGImage()

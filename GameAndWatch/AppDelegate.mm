@@ -24,6 +24,11 @@
 
 @synthesize window;
 @synthesize imageView;
+@synthesize leftButton;
+@synthesize gameAButton;
+@synthesize gameBButton;
+@synthesize timerButton;
+@synthesize rightButton;
 @synthesize platform;
 @synthesize game;
 @synthesize device;
@@ -37,6 +42,12 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
 {
+  self.leftButton.tag  = GPK_LEFT;
+  self.rightButton.tag = GPK_RIGHT;
+  self.gameAButton.tag = GPK_GAMEA;
+  self.gameBButton.tag = GPK_GAMEB;
+  self.timerButton.tag = GPK_TIME;
+  
   self.platform = new GW_Platform_OSX;    
   self.platform->initialize();
   
@@ -50,6 +61,17 @@
   
   self.imageView.image = (CGImageRef)self.platform->get_screen_image();
   [self.imageView setNeedsDisplay:YES];
+}
+
+- (IBAction)buttonDown:(NSView *)sender;
+{
+  GW_Platform_Event e;
+  e.id   = GPE_KEYDOWN;
+  e.data = (int)sender.tag;
+  
+  self.device->RunStep(&e);
+  self.imageView.image = (CGImageRef)self.platform->get_screen_image();
+  [self.imageView setNeedsDisplay:YES];  
 }
 
 @end
